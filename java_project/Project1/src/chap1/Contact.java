@@ -98,4 +98,5 @@ public class Contact {
 		
 // 인스턴스의 출력메소드를 다시 실행합니다
 	}
+	
 }
