@@ -18,43 +18,43 @@ public class ExceptionTest2 {
 			System.out.println(e.getMessage());
 		}
 		try {
-		Integer i = (Integer) o;
-		} catch(ClassCastException e) {
+			Integer i = (Integer) o;
+		} catch (ClassCastException e) {
 			System.out.println("예외 발생!!!");
 			System.out.println(e.getMessage());
 		}
 		int size = -10;
 		try {
-		int[] arr1 = new int[-10];
-		} catch(NegativeArraySizeException e) {
+			int[] arr1 = new int[-10];
+		} catch (NegativeArraySizeException e) {
 			System.out.println("예외 발생!!!");
 			System.out.println(e.getMessage());
 		}
 		try {
 			System.out.println(str.toUpperCase());
-			
+
 		} catch (NullPointerException e) {
 			System.out.println("예외 발생!!!");
 			System.out.println(e.getMessage());
 		}
-		
+
 		try {
 			// String -> int
 			int temp = Integer.parseInt(number);
-			
-		} catch(NumberFormatException e) {
+
+		} catch (NumberFormatException e) {
 			System.out.println("예외 발생!!!");
 			System.out.println(e.getMessage());
 		}
 		try {
-			System.out.println(num1 / num2);
-		}catch(Excetion e) {
-			System.out.println("예외!!!");
-		}catch(ArithmeticExceptione e) {
-			System.out.println("0으로 나눌수 있습니다.");
-			System.out.println("0으로 나눌수 있습니다.");
+			// String -> int
+			int temp = Integer.parseInt(number);
+		} catch (NumberFormatException e) {
+			System.out.println("예외 발생!!!");
+			System.out.println(e.getMessage());
 		}
 
 		System.out.println("프로그램을 종료합니다.");
 	}
+
 }

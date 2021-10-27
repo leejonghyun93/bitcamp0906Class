@@ -18,4 +18,4 @@ public class PointTwo implements Serializable {
 		return "PointTwo [xPos=" + xPos + ", yPos=" + yPos + "]";
 	}
 }
-}
+
