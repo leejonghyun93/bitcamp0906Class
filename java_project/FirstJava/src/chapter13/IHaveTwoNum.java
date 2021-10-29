@@ -11,6 +11,7 @@ public class IHaveTwoNum {
 		synchronized (this) {
 			num1 += 1;
 		}
+		System.out.println("num1 + 1");
 	}
 
 	public void addTwoNum1() {

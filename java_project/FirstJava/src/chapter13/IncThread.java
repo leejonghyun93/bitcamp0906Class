@@ -1,6 +1,6 @@
 package chapter13;
 
-public class IncThread extends Increment {
+public class IncThread extends Thread {
 
 	Increment inc;
 	
@@ -10,7 +10,7 @@ public class IncThread extends Increment {
 	public void run() {
 		for(int i=0; i<10000; i++) {
 			for(int j=0; j<10000; j++) {
-				inc= increment;
+				inc.increment();
 			}
 		}
 	}
