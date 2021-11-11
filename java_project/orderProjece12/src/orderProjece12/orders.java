@@ -3,84 +3,55 @@ package orderProjece12;
 public class orders {
 
 	private int productNumber; // 주문번호
-	private int number;      // 번호표
-	private int PurchaseDate;   // 구매일자
-	private String material;// 재료명
-	private int MaterialType;// 재료타입
-	private int calorie;    // 칼로리
-	
-	public orders() {
+	private int ticketnumber;      // 번호표
+	private String PurchaseDate;   // 구매일자
+	private int ageGroup;// 연령대
+ 	private int productId; // 상품번호
+ 	
+ 	public orders() {
 
 	}
+ 	public orders(int productNumber, int ticketnumber, String purchaseDate, int ageGroup, int productId) {
+
+		this.productNumber = productNumber;
+		this.ticketnumber = ticketnumber;
+		this.PurchaseDate = purchaseDate;
+		this.ageGroup = ageGroup;
+		this.productId = productId;
+	}
+	
 
 	public int getProductNumber() {
 		return productNumber;
 	}
 
-	public void setProductNumber(int productNumber) {
-		this.productNumber = productNumber;
+	public int getTicketnumber() {
+		return ticketnumber;
 	}
-
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public int getPurchaseDate() {
+	
+	public String getPurchaseDate() {
 		return PurchaseDate;
 	}
 
-	public void setPurchaseDate(int purchaseDate) {
-		PurchaseDate = purchaseDate;
+	public int getAgegroup() {
+		return ageGroup;
+	}
+	
+	public int getProductId() {
+		return productId;
 	}
 
-	public String getMaterial() {
-		return material;
-	}
-
-	public void setMaterial(String material) {
-		this.material = material;
-	}
-
-	public int getMaterialType() {
-		return MaterialType;
-	}
-
-	public void setMaterialType(int materialType) {
-		MaterialType = materialType;
-	}
-
-	public int getCalorie() {
-		return calorie;
-	}
-
-	public void setCalorie(int calorie) {
-		this.calorie = calorie;
-	}
-
-	public orders(int productNumber, int number, int purchaseDate, String material, int materialType, int calorie) {
-		
-		this.productNumber = productNumber;
-		this.number = number;
-		this.PurchaseDate = purchaseDate;
-		this.material = material;
-		this.MaterialType = materialType;
-		this.calorie = calorie;
-	}
 
 	@Override
 	public String toString() {
-		return "orders [productNumber=" + productNumber + ", number=" + number + ", PurchaseDate=" + PurchaseDate
-				+ ", material=" + material + ", MaterialType=" + MaterialType + ", calorie=" + calorie + "]";
+		return "orders [productNumber=" + productNumber + ", ticketnumber=" + ticketnumber + ", PurchaseDate="
+				+ PurchaseDate + ", ageGroup=" + ageGroup + ", productId=" + productId + "]";
 	}
 
 	public boolean equals(Object o) {
         if (o instanceof orders) {
         	orders b = (orders) o;
-            if (productNumber == b.productNumber) {
+            if (this.productNumber == b.productNumber) {
                 return true;
             }
         }

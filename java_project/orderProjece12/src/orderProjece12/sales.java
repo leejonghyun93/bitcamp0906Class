@@ -2,6 +2,7 @@ package orderProjece12;
 
 public class sales {
 
+	 private int productId;// 상품번호
 	 private String  productName; //  판매 상품명
 	 private int quantity; // 판매 상품  갯수
 	 private int price;  // 판매 상품 가격
@@ -12,52 +13,42 @@ public class sales {
 		
 	}
 	
-	public String getProductName() {
-		return productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public int getPrice() {
-		return price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
-	public int getCalorie() {
-		return calorie;
-	}
-
-	public void setCalorie(int calorie) {
-		this.calorie = calorie;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
 	public sales(String productName, int quantity, int price, int calorie, String type) {
 		this.productName = productName;
 		this.quantity = quantity;
 		this.price = price;
 		this.calorie = calorie;
 		this.type = type;
+	}
+	
+	
+	
+	public int getProductId() {
+		return productId;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	
+	public int getQuantity() {
+		return quantity;
+	}
+
+
+
+	public int getPrice() {
+		return price;
+	}
+
+	public int getCalorie() {
+		return calorie;
+	}
+
+	
+	public String getType() {
+		return type;
 	}
 
 	@Override
@@ -69,7 +60,7 @@ public class sales {
 	public boolean equals(Object o) {
 	        if (o instanceof sales) {
 	        	sales b = (sales) o;
-	            if (productName == b.productName) {
+	            if (this.productName == b.productName) {
 	                return true;
 	            }
 	        }
