@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 선택자</title>
+    <!--  기본선택자 -->
+    <style>
+        /* 선택자 {속성이름:속성값;속성이름:속성값} */
+        * {
+            /* color: red; */
+            /* background-color: aqua; */
+        }
+
+        h1 {
+            background-color: aquamarine;
+        }
+
+        #title {
+            font-style: italic;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .bold1 {
+            font-weight: lighter;
+        }
+
+        p {
+            color: blue;
+        }
+
+        body,
+        h1,
+        p {
+            margin: 20px;
+        }
+
+        div#contents {
+            width: 300px;
+            height: 100px;
+
+            background-color: yellow;
+
+            /* margin: 10px 20px 30px 40px ; top rigth bottom left */
+            /* margin: 30px 10px; */
+            margin: 0 auto;
+        }
+
+        div#contents {
+            width: 300px;
+            height: 100px;
+
+            background-color: yellow;
+
+
+            margin: 0 auto;
+
+            div.title {
+                color: white;
+
+            }
+    </style>
+    <style>
+        input[type] {
+            border: 5px solid #000000;
+        }
+
+        input[type=text] {
+            background-color: blue;
+        }
+
+        input[type=password] {
+            background-color: chartreuse;
+        }
+    </style>
+    <!--속성선택자-->
+    <style>
+
+    </style>
+    <!--범위한정선택:자손,후손-->
+    <style>
+        #header1 h1 {
+            background-color: white;
+            color: red;
+        }
+
+        #section h1 {
+            color: blueviolet
+        }
+
+        #header>h1 {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /*동위 선택자 : +, ~ */
+        #head1+h1 {
+            color: blue;
+        }
+
+        #head1~h2 {
+            background-color: orange;
+        }
+    </style>
+
+
+    <!-- 반응 선택자 -->
+    <style>
+        /* 마우스 커서가 특정 요소 위로 올라갔을 때 반응 */
+        h3:hover {
+            color: royalblue;
+            background-color: salmon;
+        }
+
+        h3:active {
+            color: blue;
+            background-color: chartreuse;
+        }
+    </style>
+    <!--상태 선택자-->
+    <style>
+        input:enabled {
+            border: 5px solid #ff0000;
+        }
+
+        input:disabled {
+            background-color: darkgray;
+        }
+
+        input:focus {
+            background-color: darkorange;
+            border: 5px solid darkturquoise;
+        }
+
+        #article {
+            width: 500px;
+            height: 300px;
+
+            overflow: hidden;
+        }
+
+        input[type=checkbox]:checked+div#article {
+
+            height: 0px;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        li:nth-child(2n) {
+            background-color: gold;
+            color: #000000;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: aquamarine;
+            color: blue;
+        }
+
+
+        li:first-child {
+            background-color: deeppink;
+            color: floralwhite;
+
+            border-radius: 40px 0px 0px 40px;
+        }
+
+        li:last-child {
+            background-color: deeppink;
+            color: floralwhite;
+            border-radius: 0px 40px 40px 0px;
+        }
+
+        /* 리스트 태그를 수평방향으로 나열  */
+        ul {
+            overflow: hidden;
+            /*리스트 스타일*/
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            padding: 10px 30px;
+        }
+
+        #photo {
+            border-radius: 50%;
+            border: 3px solid gray;
+        }
+        </style>
+        <!-- 링크 선택자 -->
+
+        <style>
+            a:link{
+                color : green;
+                text-decoration: none;
+            }
+            a:visited{
+                color: green;
+            }
+            a:hover{
+                color: rgb(0,0,0);
+                text-decoration: underline;
+            }
+        </style>
+</head>
+
+<body>
+test
+    <a>네이버</a>
+    <a href="test">네이버</a>
+<a href="https://www.naver.com">NAVER</a>
+    <hr>
+    <img id="photo" src="mini1.jpg" alt="">
+    <hr>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    <hr>
+    <label for="btn">기사 가리기</label><input type="checkbox">
+    <div id="article">
+        <h1>[지스타 2021]슈퍼캣 게임 '그래니의 저택', 위믹스 플랫폼 합류</h1>
+        <p>슈퍼캣이 서비스하는 '그래니의 저택'이 위믹스 플랫폼에 합류한다.
+
+            18일 위메이드와 슈퍼캣에 따르면 슈퍼캣의 게임을 위믹스 플랫폼에 온보딩하기로 합의하고 업무협약(MOU)을 체결했다.</p>
+    </div>
+    <hr>
+    <input><input disabled>
+    <hr>
+    <h3>반응선택자</h3>
+    <hr>
+    <div>
+        <h1 id="head1">Header1 - 1</h1>
+        <h1>Header1 - 2</h1>
+        <h2>Header2 - 1</h2>
+        <h2>Header2 - 2</h2>
+        <h2>Header2 - 3</h2>
+        <h2>Header2 - 4</h2>
+        <h2>Header2 - 5</h2>
+    </div>
+
+    <div id="header1">
+        <h1 class="title">제목입니다.</h1>
+        <div id="nav">
+            <h1>네비게이션</h1>
+        </div>
+
+    </div>
+    <div id="section">
+        <h1 class="title">제목2입니다.</h1>
+        <p>내용이 표현됩니다.</p>
+    </div>
+
+    <hr>
+
+
+
+
+
+
+    <input type="text"><input type="password">
+
+    <hr>
+
+    <div id="header">
+        <h1 class="tltle">HEADER</h1>
+    </div>
+    <div id="content">
+        <img src="mini1.jpg">
+    </div>
+    <div id="footer">
+
+    </div>
+    <hr>
+
+    <h1 id="title" class="bold1">"中군사력 강화 악용 우려"…美, SK하이닉스 中공장 첨단화 '제동'</h1>
+    <p class="bold">로이터는 이날 복수의 소식통을 인용해 “메모리 칩을 보다 효율적으로 생산하기 위해 중국에 있는 대형 공장을 업그레이드하려던 SK하이닉스의 계획이 무산될 위기에 처했다”며 “미국
+        관리들이 첨단화
+        과정에 쓰일 최신 장비가 중국에 들어가는 것을 원하지 않기 때문”이라고 설명했다. </p>
+    <p class="bold">로이터는 이날 복수의 소식통을 인용해 “메모리 칩을 보다 효율적으로 생산하기 위해 중국에 있는 대형 공장을 업그레이드하려던 SK하이닉스의 계획이 무산될 위기에 처했다”며 “미국
+        관리들이 첨단화
+        과정에 쓰일 최신 장비가 중국에 들어가는 것을 원하지 않기 때문”이라고 설명했다. </p>
+    <p>그러면서 “스마트폰에서 데이터센터에 이르기까지 모든 것에 들어가는 D램(DRAM) 메모리칩의 세계 최대 공급업체 중 한 곳인 SK하이닉스는 미국과 중국의 지정학적 분쟁에서 다음
+        차례 희생양이 될
+        수 있다”고 덧붙였다. </p>
+    <h1>footer</h1>
+</body>
+
+</html>
