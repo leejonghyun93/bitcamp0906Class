@@ -21,7 +21,7 @@ body{
     margin-top: 5px;
     margin-bottom:5px;
 }
-*lineheight_180per{
+.lineheight_180per{
     line-height:180%;
 }
 
@@ -35,13 +35,13 @@ body{
     background-color: white;
 
     
-    width: 798px;
-    height: 300px;
+    width: 778px;
+    height: 1710px;
 
     padding:10px;
 
     border: 1px solid #CCC;
-border-radius: 5px;
+    border-radius: 5px;
     margin: 10px auto;
 
     box-shadow: 3px 3px 10px #aaa;
@@ -102,6 +102,13 @@ nav input[type=button]{
  float:right;
 }
 
+#content_wrap>section>article{
+    padding: 15px;
+}
+#contents_wrap>section>article>img{
+    width: 500px;
+
+}
 
 
 #contents_wrap>section>article{
@@ -130,7 +137,7 @@ nav input[type=button]{
 }
 /* footer 설정 */
 footer{
-    height:30px;
-    text-align: center;
+    height:100px;
+    text-align: 
     line-height: 30px;
 }
