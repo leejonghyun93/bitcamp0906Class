@@ -1,0 +1,119 @@
+
+.textbox{
+    float:left;
+    margin-top: 200px;
+    margin-left: 200px;
+   
+}
+  h1{
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    color: blue;
+    line-height: 3px;
+   
+    
+} 
+
+ h2{
+     font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 32px;      
+    width: 500px;
+    
+   
+ 
+}
+.container{
+    width: 400px;
+    height: 350px;
+    margin-top: -194;
+    margin-right: 160px;
+    float: right;
+    border-radius:  12px;
+    background-color: rgb(168, 166, 166);
+    width: 390px;
+    height: 355px;
+    text-align: center;
+}
+.form{
+    width: 350px;
+    padding: 3rem 1.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0 9px 23px rgba(166,166,166,9);
+}
+.form input{
+    margin-top: 10px;
+    margin-left: -10px;
+    border-radius:  8px;
+    margin-right: -10px;
+    padding: 17px;
+    width: 332px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(211, 210, 210);
+    font-weight: 700;
+    color: rgb(216, 213, 213);
+    
+}
+
+button{
+    margin-top: 15px;
+    margin-left: -10px;
+      margin-right: -10px;
+    background-color: blue;
+    padding:  18px;
+    width: 106%;
+    border-radius: 8px;
+    color:white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    font-weight: 700;
+   
+}
+p{
+    background-color: white;
+    font-size: 16px;
+    color: blue;
+    margin-top: 10px;
+}
+p a{
+    color: blue;
+    background-color: white;
+
+}
+.btn{
+    padding: 7px;
+    margin-top: 15px;
+    background-color: white;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.btn button{
+    background-color: rgb(55, 180, 55);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(55, 180, 55);
+
+}  
+
+h5{
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 600;
+    color: gray
+}
+h6{
+    height:100px;
+       color: grey;
+       font-size: 11px;
+        margin: 30px 140px 10px 180px;
+        word-spacing: 5px;
+    }
+ body{
+        background-color: rgb(240, 240, 240);
+    
+ }

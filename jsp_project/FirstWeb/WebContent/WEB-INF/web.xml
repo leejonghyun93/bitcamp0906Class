@@ -14,11 +14,12 @@
   <servlet>
        <servlet-name>HelloServlet</servlet-name>
        <servlet-class>first.HelloServlet</servlet-class>
+        <!--  http://localhost:8080/first/hello -->
   </servlet>
   <!-- 요청 경로와 서블릿 객체와 연결 -->
   <servlet-mapping>
    <servlet-name>HelloServlet</servlet-name>
    <url-pattern>/hello</url-pattern>
-  <!--  http://localhost:8080/first/hello -->
+  <!--  http://localhost:8080/first/Hello -->
   </servlet-mapping>
 </web-app>
