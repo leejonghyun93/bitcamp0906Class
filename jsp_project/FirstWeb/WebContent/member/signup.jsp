@@ -36,5 +36,7 @@
 			out.println("관심사 : 선택된 관심사가 없습니다.<br>");
 		}
 		%>
+		
+		byear : <%= byear %><br>
 </body>
 </html>
