@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 리스트</title>
+<title>방명록 리스트</title>
 
 <%@ include file="/WEB-INF/views/frame/pageset.jsp"%>
 
@@ -19,13 +19,29 @@
 	width: 900px;
 }
 #content>table td, #content>table th {
-	border: 1px solid #aaa;
+	/* border: 1px solid #aaa; */
 	padding: 10px;
 	
 	text-align: center;
 }
+#content>table tr {
+	border: 1px solid #aaa;
+}
+#content>table>tbody>tr:hover {
+	background-color: #ddd;
+}
+#content>table th:nth-child(1) { width: 40px;}
+#content>table th:nth-child(3) { width: 150px;}
+#content>table th:nth-child(4) { width: 200px;}
+#content>table td>img {
+	height : 25px;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	
+	/* vertical-align: middle; */
+}
 #listInfo {
-	border : 1px solid #aaa;
+	/* border : 1px solid #aaa; */
 	width : 870px;
 }
 #paging {
@@ -70,41 +86,37 @@
 
 	<!-- content 시작 -->
 	<div id="content">
-		<h3>회원 리스트</h3>
+		<h3>방명록 리스트</h3>
 		<hr>
 		<div id="listInfo">
-			전체 회원 수: ${listView.totalCount}명 , 현재 페이지: ${listView.currentPage}/${listView.pageTotalCount} 
+			방명록 메시지 수: ${listView.totalCount}개 , 현재 페이지: ${listView.currentPage}/${listView.pageTotalCount} 
 		</div>
 		<table>
-			<tr>
-				<th>idx</th>
-				<th>user ID</th>
-				<th>password</th>
-				<th>user Name</th>
-				<th>photo</th>
-				<th>regdate</th>
-				<th>manage</th>
-			</tr>
+			<thead>
+				<tr>
+					<th>idx</th>
+					<th>subject</th>
+					<th>writer</th>
+					<th>regdate</th>
+				</tr>
+			</thead>
 			
 			<c:if test="${empty listView.list}">\
 			<tr>
-				<td colspan="7">등록된 회원 데이터가 없습니다.</td>
+				<td colspan="4">등록된 게시물 데이터가 없습니다.</td>
 			</tr>
 			</c:if>
 			<c:if test="${not empty listView.list}">
 			
-			<c:forEach items="${listView.list}" var="member">
+			<c:forEach items="${listView.list}" var="article">
 			<tr>
-				<td>${member.idx}</td>
-				<td>${member.userid}</td>
-				<td>${member.pw}</td>
-				<td>${member.username}</td>
-				<td>${member.photo}</td>
-				<td>${member.regdate}</td>
+				<td>${article.idx}</td>
+				<td><a href="${pageContext.request.contextPath}/guestbook/view.do?idx=${article.idx}">${article.subject}</a></td>
 				<td>
-					<a href="edit.do?idx=${member.idx}">수정</a>					
-					<a href="javascript:delMember(${member.idx})">삭제</a>
+					<img src="${pageContext.request.contextPath}/uploadfile/${article.photo}">
+					${article.username}
 				</td>
+				<td>${article.regdate}</td>
 			</tr>
 			</c:forEach>
 			
@@ -132,14 +144,8 @@
 	<%@ include file="/WEB-INF/views/frame/footerset.jsp" %>
 
 <script>
-function delMember(idx){
-	
-	if(confirm("해당 회원 정보를 삭제하시겠습니까?")){
-		location.href = 'delete.do?idx='+99;
-	}
-	
-}
 </script>
 
 </body>
 </html>
+

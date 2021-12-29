@@ -3,7 +3,7 @@ package member.domain;
 import java.sql.Timestamp;
 
 /*
-	작업자 : 유영진
+	작업자 : 이종현
 	날짜 : 2021.12.21
 	작업내용 : 사진 파일의 경로를 저장하는 변수 추가
 */

@@ -23,6 +23,9 @@ public class MemberEditCommandImpl implements Command {
 
 		} else if (request.getMethod().equals("POST")) {
 
+			request.setAttribute("result", MemberEditService.getInstance().editMember(request, response));
+			
+			view = "/WEB-INF/views/member/manager/edit.jsp";
 		}
 
 		return view;
