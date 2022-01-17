@@ -13,15 +13,15 @@ public class MemberRegService {
 	private Dao dao;	
 	// Dao 타입의 객체를 주입 받는 방법 : 생성자, setter 메소드
 	
-	public MemberRegService() {}
+	//public MemberRegService() {}
 	
 	public MemberRegService(Dao dao) {
 		this.dao = dao;
 	}
 	
-	public void setDao(Dao dao) {
-		this.dao = dao;
-	}
+//	public void setDao(Dao dao) {
+//		this.dao = dao;
+//	}
 	
 	public void regMember(RegRequest request) throws DuplicateMemberException {
 		
