@@ -25,6 +25,40 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	</select>
 	
+	<select id="selectByIdx"
+			resultType="com.bitcamp.op.guestbook.domain.PageView"
+	>
+	
+	select 
+		g.idx as idx, 
+		g.subject as subject, 
+		g.content as content, 
+		m.username as username, 
+		g.regdate as regdate, 
+		m.photo as photo, 
+		m.idx as memberidx, 
+		m.userid as userid 
+	from project.guestbook g join project.member m 
+	on g.memberidx=m.idx 
+	where g.idx=#{idx}
+	</select>
+	
+	<select id="selectReplyList"
+			resultType="com.bitcamp.op.guestbook.domain.ReplyListItem"
+	>
+		select 
+			r.idx, 
+			r.content, 
+			r.regdate, 
+			r.memberidx, 
+			r.guestbookidx, 
+			m.username, 
+			m.photo 
+		from member m join reply r 
+		on m.idx=r.memberidx 
+		where r.guestbookidx=#{idx}
+	</select>
+	
 	
 	
 	
